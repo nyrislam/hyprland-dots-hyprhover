@@ -30,6 +30,8 @@ sudo pacman -S ttf-hack-nerd ttf-jetbrains-mono-nerd ttf-fira-code-nerd
 sudo pacman -S hyprland waybar wofi swww nwg-look swaync
 # Build dependencies if needed
 sudo pacman -S base-devel
+
+yay -S matugen-bin
 ```
 If you use another system (e.g., Debian/Ubuntu), the commands would be:
 
