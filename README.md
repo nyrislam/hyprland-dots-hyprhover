@@ -27,7 +27,7 @@ sudo pacman -Syu imagemagick bc kitty zsh git wget curl
 # Nerd Fonts (for example Hack Nerd Font)
 sudo pacman -S ttf-hack-nerd ttf-jetbrains-mono-nerd ttf-fira-code-nerd
 # Additional packages for Hyprland and related utilities
-sudo pacman -S hyprland waybar wofi swww nwg-look
+sudo pacman -S hyprland waybar wofi swww nwg-look swaync
 # Build dependencies if needed
 sudo pacman -S base-devel
 ```
