@@ -1,0 +1,44 @@
+@import '/home/nyrik/.config/wofi/matugen/matugen-wofi.css';
+
+@define-color background @window_bg_color;
+
+window {
+color: @on_surface;
+background: alpha(@surface_container_lowest, 0.95);
+margin: 0px;
+padding: 0;
+border-radius: 6px;
+}
+
+#input {
+color: @on_surface;
+background-color: alpha(@surface_container_lowest, 0.15);
+margin: 4px;
+border: none;
+}
+
+#inner-box {
+margin: 4px;
+border: none;
+}
+
+#outer-box {
+margin: 4px;
+border: none;
+}
+
+#scroll {
+margin: 0px;
+border: none;
+}
+
+#text {
+color: @on_surface;
+margin: 4px;
+border: none;
+}
+
+#entry:selected {
+color: @on_surface;
+background-color: alpha(@surface_container_lowest, 0.15);
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+if pacman -Si "$1" &>/dev/null; then
+    sudo pacman -S "$@"
+else
+    yay -S "$@"
+fi

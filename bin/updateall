@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Обновляем пакеты pacman..."
+sudo pacman -Syu
+
+echo "Обновляем пакеты AUR..."
+yay -Syu
+
+echo "Обновление завершено ✅"

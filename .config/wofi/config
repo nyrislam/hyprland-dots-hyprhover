@@ -1,0 +1,11 @@
+[wofi]
+# Размер окна в пикселях
+location = top-left
+archor = top-left
+x = 5
+y = 4
+width = 343
+height = 400
+
+# Размер шрифта
+font = "JetBrains Mono 12"

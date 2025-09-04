@@ -1,0 +1,29 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "center", "--transition-step", "15", "--transition-fps", "60"]
+set = true
+
+[templates.hyprland]
+input_path  = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/matugen/matugen-hyprland.conf"
+post_hook   = "hyprctl reload"
+
+[templates.waybar]
+input_path  = "~/.config/matugen/templates/colors.css"
+output_path = "~/.config/waybar/matugen/matugen-waybar.css"
+
+[templates.gtk3]
+input_path  = "~/.config/matugen/templates/gtk-colors.css"
+output_path = "~/.config/gtk-3.0/matugen/matugen-gtk3.css"
+
+[templates.gtk4]
+input_path  = "~/.config/matugen/templates/gtk-colors.css"
+output_path = "~/.config/gtk-4.0/matugen/matugen-gtk4.css"
+
+[templates.kitty]
+input_path  = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/matugen/matugen-kitty.conf"
+
+[templates.wofi]
+input_path  = "~/.config/matugen/templates/colors.css"
+output_path = "~/.config/wofi/matugen/matugen-wofi.css"

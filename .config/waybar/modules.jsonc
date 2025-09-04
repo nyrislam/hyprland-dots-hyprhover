@@ -1,0 +1,195 @@
+{
+  "group/launcher": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 200,
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/menu",
+      "custom/poweroff",
+      "custom/reboot",
+      "custom/lock"
+    ]
+  },
+
+  "custom/menu": {
+    "format": "app",
+    "on-click": "pkill wofi || wofi --show drun -modi run,drun,filebrowser,window",
+    "tooltip": false
+  },
+
+  "custom/poweroff": {
+    "format": "⏻  off",
+    "on-click": "systemctl poweroff",
+    "tooltip": false
+  },
+
+  "custom/reboot": {
+    "format": "  reboot",
+    "on-click": "systemctl reboot",
+    "tooltip": false
+  },
+
+  "custom/lock": {
+    "format": "  loc",
+    "on-click": "loginctl lock-session",
+    "tooltip": false
+  },
+
+"group/date": {
+  "orientation": "inherit",
+  "drawer": {
+    "transition-duration": 200,
+    "transition-left-to-right": true
+  },
+  "modules": ["clock","clock#4"]
+},
+
+"clock": {
+  "format": "{:%R}",
+  "tooltip-format": "<big>{:%R}</big>"
+},
+
+"clock#4": {
+  "format": "{:%Y-%m-%d}",
+  "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>"
+},
+
+
+  "group/wifi": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 200,
+      "transition-left-to-right": true
+    },
+    "modules": ["network","network#speed"]
+  },
+
+  "network": {
+    "format": "{icon}",
+    "format-icons": {
+      "wifi": ["󰤨"],
+      "ethernet": ["󰈁"],
+      "disconnected": [""],
+    },
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈁",
+    "format-disconnected": "󰖪",
+    "format-linked": "󰈁",
+    "tooltip": false,
+    "on-click": "pgrep -x rofi &>/dev/null && notify-send rofi || networkmanager_dmenu",
+  },
+  "network#speed": {
+    "format": " {bandwidthDownBits} ",
+    "interval": 5,
+    "tooltip-format": "{ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)   \n{ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-ethernet": "{ifname} 󰈀 \n{ipaddr} | {frequency} MHz{icon} ",
+    "tooltip-format-disconnected": "Not Connected to any type of Network",
+    "tooltip": true,
+    "on-click": "pgrep -x wofi &>/dev/null && notify-send wofi || networkmanager_dmenu",
+  },
+
+  "group/sound": {
+    "format": "",  // иконка динамика
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 200,
+      "transition-left-to-right": true
+    },
+    "modules": ["pulseaudio", "pulseaudio/slider"]
+  },
+
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}",
+    "format-bluetooth": "{icon}",
+    "format-bluetooth-muted": "{icon}",
+    "format-muted": "",
+    "format-source": "",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "pulseaudio/slider#4": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal",
+      "expand": true
+  },
+
+  "group/demo": {
+    "orientation": "inherit",
+    "modules": ["custom/tray", "custom/brightness", "tray"],
+    "drawer": {
+      "transition-duration": 200,
+      "transition-right-to-left": true
+    },
+  },
+
+  "custom/tray": {
+    "format": "▶",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 4,
+  },
+
+"custom/weather": {
+	"format": "{}",
+	"format-alt": "{alt}: {}",
+	"format-alt-click": "click",
+	"interval": 3600,
+	"return-type": "json",
+	//"exec": "~/.config/script/Weather.py",
+	"exec": "~/.config/script/Weather.sh",
+	"exec-if": "ping wttr.in -c1",
+	"tooltip": true,
+},
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "show-special": false,
+    "active-only": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "10": "10",
+      "focused": "",
+      "default": ""
+    }
+  }
+}

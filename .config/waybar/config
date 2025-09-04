@@ -1,0 +1,28 @@
+{
+  "layer": "top",
+  "position": "top",
+  "exclusive": false,
+  "height": 36,
+  "width" : 1200,
+  "margin-left": 50,
+  "margin-right": 50,
+  "margin-top": 5,
+
+  "fixed-center": true,
+  "reload_style_on_change": true,
+  "include": ["~/.config/waybar/modules.jsonc"],
+  "modules-left": [
+    "group/launcher"
+  ],
+  
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "group/demo",
+    "group/sound",
+    "group/wifi",
+    "group/date"
+  ]
+}

@@ -1,0 +1,7 @@
+#!/bin/bash
+# Проверяем, установлен ли пакет в официальных репах
+if pacman -Qi "$1" &>/dev/null; then
+    sudo pacman -Rns "$@"
+else
+    yay -Rns "$@"
+fi

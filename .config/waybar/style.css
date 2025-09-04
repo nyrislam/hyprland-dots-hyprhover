@@ -1,0 +1,130 @@
+@import 'matugen/matugen-waybar.css';
+
+* {
+  font: bold 14px "JetBrainsMono Nerd Font Propo";
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31", "f1294", "f1295"';
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  min-width: 0;
+}
+
+window#waybar {
+  border-radius: 4px;
+  background: alpha(@surface_container_lowest, 0.9);
+  /*border: 0px solid alpha(@background,0.8);*/
+}
+
+tooltip {
+  padding: 9px 9px;
+  margin: 9px 9px;
+  /* background: alpha(@background, 0.9); */
+  border-radius: 2px;
+}
+
+/**/
+
+#pulseaudio-slider slider {
+min-height: 3px;
+min-width: 3px;
+border-radius: 3px;
+background: @on_surface;
+}
+#pulseaudio-slider trough {
+min-height: 4px;
+min-width: 56px;
+border-radius: 3px;
+background-color: alpha(@inverse_primary, 0.9);
+}
+#pulseaudio-slider highlight {
+min-height: 4px;
+border-radius: 3px;
+background-color: alpha(@inverse_primary, 0.9);
+}
+
+/* === Общий стиль для модулей === */
+
+#launcher,
+#demo,
+#sound,
+#wifi,
+#date,
+#workspaces {
+  margin: 3px 3px;
+  background: alpha(@inverse_primary, 0.3);
+  color: @inverse_primary;
+  border-radius: 4px;
+}
+
+/**/
+#custom-menu,
+#custom-poweroff,
+#custom-reboot,
+#custom-lock,
+/**/
+#clock,
+/**/
+#network,
+/**/
+#pulseaudio,
+#pulseaudio-slider,
+/**/
+#custom-tray,
+#tray,
+/**/
+#workspaces button {
+  padding: 0px 9px;
+  margin: 3px 3px;
+  background: alpha(@inverse_primary, 0.3);
+  border-radius: 4px;
+}
+
+#custom-menu:hover,
+#custom-poweroff:hover,
+#custom-reboot:hover,
+#custom-lock:hover,
+/**/
+#clock:hover,
+/**/
+#network:hover,
+/**/
+#pulseaudio:hover,
+#pulseaudio-slider:hover,
+/**/
+#custom-tray:hover,
+#tray:hover {
+  background: alpha(@inverse_primary, 0.6);
+}
+
+#workspaces button {
+  color: @on_surface;
+  padding: 0px 12px;
+  border-radius: 3px;
+}
+
+#workspaces button.active {
+  color: @inverse_primary;
+  background: @on_surface;
+  padding: 0px 18px;
+}
+
+#workspaces button:hover {
+  background: alpha(@inverse_primary, 0.6);
+  padding: 0px 18px;
+}
+
+/* === Часы === */
+#clock,
+#network,
+#pulseaudio,
+#demo,
+#custom-menu,
+#custom-poweroff,
+#custom-reboot,
+#custom-lock {
+  color: @on_surface;
+}
