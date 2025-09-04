@@ -1,10 +1,12 @@
 ## hyprhover
 
 ---
+
 <details>
 <img width="1920" height="1080" alt="изображение" src="https://github.com/user-attachments/assets/ba394d55-5b7c-4f35-89c7-5a595d1d49f3" />
 <img width="1920" height="1080" alt="изображение" src="https://github.com/user-attachments/assets/b377dbca-096a-434a-abb3-14ac5e7852f9" />
 </details>
+
 ---
 
 - WM: Hyprland
